@@ -3,7 +3,7 @@ FROM circleci/php:7.3-cli-node
 #
 # Install system dependencies
 RUN sudo apt-get update \
- 	&& sudo apt-get install -y libmcrypt-dev git unzip wget libpng-dev libsqlite3-dev libsqlite3-dev libnss3 libgconf-2-4 libfontconfig1 chromium xvfb\
+ 	&& sudo apt-get install -y libmcrypt-dev git unzip wget mariadb-client libpng-dev libsqlite3-dev libsqlite3-dev libnss3 libgconf-2-4 libfontconfig1 chromium xvfb\
 #
 # Install PHP extensions
 	&& sudo docker-php-ext-install -j$(nproc) pdo_mysql pdo_sqlite gd zip exif bcmath \
